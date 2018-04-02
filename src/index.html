@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>git</title>
+</head>
+<body>
+	<pre>
+		
+
+	https://www.youtube.com/watch?v=HVsySz-h9r4
+
+	CONFIGURE ACCOUNT
+git config --global user.name "YOUR GitHub ACCOUNT NAME"
+git config --global user.email GitHubEMAIL.COM
+
+git clone https://github.com/nalagg/git-test/
+
+
+
+	4 MAJOR FUNCTIONS
+
+- PUSH
+- PULL
+- COMMIT
+- CLONE
+
+
+	Credential Storage
+git config --global credential.helper cache
+
+	Git to keep your password cached in memory for (by default) 15 minutes. 
+git config --global credential.helper "cache --timeout=3600"
+
+
+
+	Recursively add the entire folder to a repository
+git add foldername/\\*
+git commit -m "comments..."
+git push remote_server_name master
+
+
+
+
+	QUICK STEPS TO UPDATE
+	
+	show changes
+git diff
+	you must add files to staging area, this is all
+git add -A
+git commit -m "detailed description of the push"	
+	push your code out
+git push origin master
+
+
+
+
+	!!! cd to local dir
+
+	enter user email and name, you dont need --global
+git config --global user.email "myemail@myDomain.com"
+git config --global user.name "My Name"
+
+	places .git dir into working dir
+git init
+	
+	shows which files are yes/no tracked
+git status
+
+	to ignore files you dont want to commit
+touch .gitignore
+	
+	then open that .gitignore file in text editor and list the files to omit, you can use * wildcard
+
+ 
+	< STAGING STEP >
+
+	you must add files to staging area, this is all
+git add -A
+
+	inidividual file
+git add scripts/my-script.js
+
+	to remove files from staging area
+git reset scripts/my-script.js
+
+	to remove all, No need for "-A"
+git reset
+
+
+
+
+	< PULL >
+	always add your code to top of remote
+pull --rebase
+
+
+
+
+	< COMMIT >
+git commit -m "detailed description of the push"	
+
+
+	get information about repository
+	directory
+git remote -v
+	files
+git branch -a
+
+	show changes
+git diff
+
+
+
+
+	< PUSH >
+	first pull down master, any changes from other dev will be here
+	origin: local
+	master: branch
+git pull origin master
+
+	push your code out
+git push origin master
+
+
+
+
+
+	< FLOW >
+	create branch from where you will be working
+git branch my-branch-name
+
+	then push that branch, not the entire master
+	the u defines the push/pull area
+git push -u origin my-branch-name	
+
+	so that in the future you can simply do this and it knows where
+git pull
+git push
+
+
+
+
+
+
+
+	</pre>
+</body>
+</html>
