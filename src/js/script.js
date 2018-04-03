@@ -1,1 +1,7 @@
-//
+
+
+
+// init
+$(document).ready(function(){
+  
+});
